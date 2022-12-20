@@ -150,3 +150,28 @@ canvas {
     pointer-events: none;
     display: block;
 }
+
+@media screen and (max-width: 360px) {
+    .item1 {
+        width: 360px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1em;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+        gap: 0px;
+    }
+
+    .item {
+        width: 100px;
+        height: 100px;
+    }
+
+    label {
+        width: 100px;
+        height: 100px;
+    }
+}
