@@ -1,0 +1,152 @@
+body {
+    background-color: #315257;
+    max-width: 1440px;
+    max-height: 100vh;
+    margin: 0;
+}
+
+.item1 {
+    grid-column: 1/4;
+    background-color: #315257;
+    width: 480px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+    align-items: center;
+}
+
+.header-bg {
+    height: 70px;
+    width: 70px;
+}
+
+h1, h2, h3 {
+    color: #fcf0b8;
+}
+
+h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    padding-left: 10px;
+}
+
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 5px 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.back-i25 {
+    background-color: white;
+}
+
+.grid-container {
+    display: grid;
+    gap: 5px;
+    background-color: #315257;
+    padding: 20px 10px 20px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+    grid-auto-rows: 160px;
+}
+
+.item {
+    width: 160px;
+    height: 160px; 
+}
+
+label {
+    perspective: 1000px;
+    width: 160px;
+    height: 160px;
+    display: block;
+}
+
+.card {
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+:checked+.card {
+    transform: rotateY(180deg);
+}
+
+input {
+    display: none;
+}
+
+.front {
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #fcf0b8;
+    border-radius: 20px;
+    background-color: #cd2f20;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p1, .p2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #fcf0b8;
+}
+
+.p1 {
+    margin-bottom: 0;
+}
+
+.p2 {
+    margin-top: 0;
+}
+
+.back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #fcf0b8;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: block;
+}
